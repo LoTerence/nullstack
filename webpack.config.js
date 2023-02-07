@@ -267,13 +267,13 @@ function server(env, argv) {
       }),
     )
   }
-  return {
-    experiments: {
-      lazyCompilation: {
-        imports: isDev,
-        entries: false,
-      },
+  /* experiments: {
+    lazyCompilation: {
+      imports: isDev,
+      entries: false,
     },
+  }, */
+  return {
     mode: argv.environment,
     infrastructureLogging: { level: 'error' },
     entry: isDev
@@ -422,13 +422,13 @@ function client(env, argv) {
       }),
     )
   }
-  return {
-    experiments: {
-      lazyCompilation: {
-        imports: isDev,
-        entries: false,
-      },
+  /* experiments: {
+    lazyCompilation: {
+      imports: isDev,
+      entries: false,
     },
+  }, */
+  return {
     mode: argv.environment,
     infrastructureLogging: { level: 'error' },
     entry: isDev
