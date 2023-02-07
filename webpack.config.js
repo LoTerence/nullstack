@@ -16,11 +16,11 @@ function getLoader(loader) {
   return path.posix.join(loaders, loader)
 }
 
-const originalLog = console.log
-global.console.log = function (...args) {
-  if (args[0].toString().startsWith('[nodemon-webpack-plugin]')) return
-  originalLog(...args)
-}
+// const originalLog = console.log
+// global.console.log = function (...args) {
+//   if (args[0].toString().startsWith('[nodemon-webpack-plugin]')) return
+//   originalLog(...args)
+// }
 
 function cacheFactory(args, folder, name) {
   if (args.cache || args.environment === 'development') {
